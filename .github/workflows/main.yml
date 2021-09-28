@@ -36,11 +36,11 @@ jobs:
       - name: Test code 
         run: dotnet test --no-restore --verbosity normal
       - name: Publish application
-        run: dotnet publish -c Release -o myApp
+        run: dotnet publish -c Release -o api-pkg
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
-         name: my-artifact
-         path: "." 
+         name: api-pkg
+         path: "./api-pkg" 
 
       
